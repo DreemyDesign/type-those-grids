@@ -11,14 +11,48 @@ font-family: 'Merriweather', serif;
 */
 
 html {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   line-height: 1.5;
 }
 
-main ul {
+img {
+  width:100%;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.main-grid {
   list-style-type: none;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: .25rem;
+  grid-template-areas:
+    "artemis rhodes babylon";
+  gap: .5em;
+}
+
+#artemis {
+  grid-area: "artemis";
+}
+
+#rhodes {
+  grid-area: "rhodes";
+}
+
+#babylon {
+  grid-area: "babylon";
+}
+
+figure {
+  padding: 0;
+  margin: 0;
 }
