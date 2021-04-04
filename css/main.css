@@ -1,58 +1,92 @@
 html {
   box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-/*
-font-family: 'Merriweather', serif;
-*/
+body {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+  align-self: stretch;
+}
 
-html {
-  font-family: "Merriweather", serif;
-  line-height: 1.5;
+header {
+  grid-area: header;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  grid-area: main;
 }
 
 img {
-  width:100%;
-  padding: 0;
+  width: 100%;
 }
 
 h1 {
   font-size: 1.8rem;
   font-style: italic;
+  padding-left: 1rem;
+  padding-top: .25rem;
 }
 
 h2 {
   font-size: 1.5rem;
   font-style: italic;
+  line-height: 0;
 }
 
 .main-grid {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "artemis rhodes babylon";
-  gap: .5em;
-}
-
-#artemis {
-  grid-area: "artemis";
-}
-
-#rhodes {
-  grid-area: "rhodes";
-}
-
-#babylon {
-  grid-area: "babylon";
+  gap: .75em;
 }
 
 figure {
   padding: 0;
   margin: 0;
+}
+
+figcaption {
+  padding: 0 1rem;
+}
+
+header figure {
+  background-image: url(../images/panorama.jpg);
+  background-size: cover;
+  height: 23rem;
+  margin-top: 1.5rem;
+  margin-bottom: .75em;
+}
+
+header figcaption {
+  color:#fff;
+  padding-top: 17.5rem;
+}
+
+dt {
+  font-style: italic;
+}
+
+dd {
+  padding: 0;
+  margin: 0 1rem;
+}
+
+main h2 {
+  margin-top: 2rem;
 }
